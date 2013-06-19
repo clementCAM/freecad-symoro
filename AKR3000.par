@@ -16,10 +16,11 @@
 
 (* General parameters *)
 (* Robotname = 'AKR3000' *)
-NF = 6
-NL = 6
-NJ = 6
+NF = 14 (* Number of frames *)
+NL = 10 (* Number of moving moving links *)
+NJ = 12 (* Number of joints *)
 Type = 0 (* Simple *)
+(* Number of loops = NJ - NL *)
 
 (* Geometric parameters *)
 Ant = {
