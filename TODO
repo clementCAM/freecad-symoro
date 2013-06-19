@@ -2,11 +2,17 @@ TODO list
 
 more or less in the order of priorities. Non exhaustive.
 
-- test for the Jacobian computation for serial links.
-- Loop-closure optimisation. Detection of singular Jacobian.
 - Add frames of the Khalil-Kleinfinger description with a property in the
-  "View" tab to switch them on/off. --> Matthias
-- Use real shapes for the graphical representation with a property in the
-  "View" tab to switch  between real shapes and schematic representation. --> Izzat
+  "View" tab to switch them on/off.
+- Improve the parser to create the table for closed-loop mechanisms
+- Create a small GUI to ask the user for numerical values
 - Solve TODOs inside the code.
 - Improve comments and code quality.
+
+Not part of the current project:
+- Use real shapes for the graphical representation with a property in the
+  "View" tab to switch  between real shapes and schematic representation.
+- Improve robustness of the loop-closure optimisation (i.e. detection of singular Jacobian).
+- Manage all kind of mechanisms (detect the most inner loops and start to solve these)
+- Print the inertia parameters when a link is selected.
+- Change the shape of the links to represent their inertia
