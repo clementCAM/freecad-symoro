@@ -47,7 +47,16 @@ class ParLexer(object):
         self.lexer = lex.lex(module=self, **kwargs)
         self.lookup = {}
 
-	#M: keywords to look out for in the .par file
+    # Keywords to look out for in the .par file.
+    # NF = number of frames
+    # NL = number of moving links
+    # NJ = number of joints
+    # Type = 0 for simple serial structure; 2 for closed-loop
+    # Ant = index of the antecedant
+    # Sigma = 0 for revolute joint, 1 for prismatic one and 2 for fixed.
+    # B, d, R, gamma, Alpha, Theta = parameters of modified Denavit-Hartenberg
+    #   convention (Khalil-Kleinfinger convention).
+    # Mu = 0 for passive joint, 1 for actuated joint.
     keywords = [
         'NF', 'NL', 'NJ', 'Type',
         'Ant', 'Sigma', 'B', 'd', 'R',
