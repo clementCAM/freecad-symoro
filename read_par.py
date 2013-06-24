@@ -293,10 +293,15 @@ def par_reader(fname):
     table = []
     # antecedant, sameas, mu, sigma,
     #   gamma, b, alpha, d, theta, r
-    for i in range(robdef['NJ']):
+    nloops = robdef['NJ'] - robdef['NL']
+    for i in range(robdef['NF']):
+        if i > robdef['NJ']:
+            sameas = i - nloops
+        else:
+            sameas = 0
         table.append((
             robdef['Ant'][i],
-            0,
+            sameas,
             robdef['Mu'][i],
             robdef['Sigma'][i],
             robdef['gamma'][i],
@@ -306,7 +311,4 @@ def par_reader(fname):
             robdef['Theta'][i],
             robdef['R'][i],
         ))
-    # TODO: if there is a passive joint, ask the user to set the sameas field
-    # Indeed, in this case, we have a closed-loop mechanism, we need
-    # information about where the loops are.
     return robot_name, table
