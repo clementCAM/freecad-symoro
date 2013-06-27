@@ -2,14 +2,14 @@ TODO list
 
 more or less in the order of priorities. Non exhaustive.
 
-- Add frames of the Khalil-Kleinfinger description with a property in the
-  "View" tab to switch them on/off.
-- Improve the parser to create the table for closed-loop mechanisms
-- Create a small GUI to ask the user for numerical values
+- Create a small GUI to ask the user for numerical values (at best ask all values in one single dialog)
+- Show the joint parameters when a joint is selected
+- Rename "Scientific representation"
 - Solve TODOs inside the code.
 - Improve comments and code quality.
 
 Not part of the current project:
+- Save as .par file instead of .geo file
 - Use real shapes for the graphical representation with a property in the
   "View" tab to switch  between real shapes and schematic representation.
 - Improve robustness of the loop-closure optimisation (i.e. detection of singular Jacobian).
